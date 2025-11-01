@@ -4,16 +4,16 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     [Header("Input Buffering")]
-    [SerializeField] private float inputBufferTime = 0.2f;
+    [SerializeField] private float _inputBufferTime = 0.2f;
 
     public Vector2 MoveValue => _inputActions.Player.Move.ReadValue<Vector2>();
     public Vector2 LookValue => _inputActions.Player.Look.ReadValue<Vector2>();
     public bool AttackPressed => 
-        Time.time - _attackBufferTimestamp <= inputBufferTime;
+        Time.time - _attackBufferTimestamp <= _inputBufferTime;
     public bool DodgePressed =>
-        Time.time - _dodgeBufferTimestamp <= inputBufferTime;
+        Time.time - _dodgeBufferTimestamp <= _inputBufferTime;
     public bool RunPressed =>
-        Time.time - _runBufferTimestamp <= inputBufferTime;
+        Time.time - _runBufferTimestamp <= _inputBufferTime;
 
     private InputActionsMap _inputActions;
     private float _attackBufferTimestamp;
