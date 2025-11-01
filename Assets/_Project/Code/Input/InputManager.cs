@@ -19,8 +19,8 @@ public class InputManager : MonoBehaviour
         Time.time - _dodgeBufferTimestamp <= _inputBufferTime;
 
     private InputActionsMap _inputActions;
-    private float _attackBufferTimestamp;
-    private float _dodgeBufferTimestamp;
+    private float _attackBufferTimestamp  = -1000; // initial dummy value away of 0
+    private float _dodgeBufferTimestamp  = -1000; // initial dummy value away of 0
 
     private void Awake()
     {

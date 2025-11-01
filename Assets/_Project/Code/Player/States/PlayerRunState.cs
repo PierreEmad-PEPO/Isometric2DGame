@@ -12,17 +12,40 @@ public class PlayerRunState : IState
     public void Enter()
     {
         Debug.Log("[Run State]: Entered");
+
+    }
+
+
+    public void FixedExecute() 
+    {
+        // ----- Core Logic -----
+        // Update Direction by input at real-time.
+        _stateMachine.PlayerController.PlayerMovement.SetRunMovement(InputManager.Instance.MoveValue);
+        // Apply the movement.
+        _stateMachine.PlayerController.PlayerMovement.Move();
     }
 
     public void Execute()
     {
-
+        // ----- Transitions -----
+        // Check the sqrMagnitude instead of Magnitude for better performance.
+        if (InputManager.Instance.MoveValue.sqrMagnitude < 0.1f)
+        {
+            _stateMachine.ChangeState(_stateMachine.IdleState);
+        }
+        else if (!InputManager.Instance.RunIsPressing)
+        {
+            // Return to walk
+            _stateMachine.ChangeState(_stateMachine.WalkState);
+        }
+        else if (InputManager.Instance.DodgePressed)
+        {
+            _stateMachine.ChangeState(_stateMachine.DodgeState);
+        }
     }
 
     public void Exit()
     {
 
     }
-
-    public void FixedExecute() { }
 }
