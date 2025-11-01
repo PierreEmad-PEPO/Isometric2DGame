@@ -104,8 +104,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1.3}
+  m_Offset: {x: 0.06, y: 0.225}
+  m_Size: {x: 0.45, y: 0.45}
   m_Direction: 0
 --- !u!50 &8599063839779034843
 Rigidbody2D:
@@ -195,6 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3457737722464679533}
   - component: {fileID: 6072853710093625379}
+  - component: {fileID: 251876950378868970}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -258,17 +259,39 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -8454998811226258902, guid: e59f8f947abd3074499769a84a469aa8, type: 3}
+  m_SortingLayerID: 91577827
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -967913291, guid: 216835285d2c4674595a9eb9520a4ac4, type: 3}
   m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.57, y: 1.27}
+  m_Size: {x: 0.55, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &251876950378868970
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6782835853020386680}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea5eb37f4791b4146875899a9d62372c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
