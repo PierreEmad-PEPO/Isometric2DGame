@@ -31,10 +31,6 @@ public class PlayerIdleState : IState
         {
             _stateMachine.ChangeState(_stateMachine.WalkState);
         }
-        else if (InputManager.Instance.DodgePressed)
-        {
-            _stateMachine.ChangeState(_stateMachine.DodgeState);
-        }
     }
 
     public void Exit() {  }

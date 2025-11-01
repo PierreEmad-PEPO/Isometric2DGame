@@ -56,6 +56,14 @@ public class InputManager : MonoBehaviour
         _inputActions.Player.Enable();
     }
 
+    public void ResetAttackTimestamp()
+    {
+        _attackBufferTimestamp = -1000;
+    }
+    public void ResetDodgeTimestamp()
+    {
+        _dodgeBufferTimestamp = -1000;
+    }
 
     private void AttackPerformed(InputAction.CallbackContext obj)
     {

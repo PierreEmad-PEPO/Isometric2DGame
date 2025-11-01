@@ -19,8 +19,12 @@ public class PlayerDodgeState : IState
         Debug.Log("[Dodge State]: Entered");
 
         _elapsedTime = 0;
+        // Store the dodge direction to move along it.
         _dodgeDirection = InputManager.Instance.MoveValue;
+        // Stops the player (igore any previous forces).
         _stateMachine.PlayerController.PlayerMovement.SetIdleMovement();
+        // Reset the dodge timestamp to avoid returning back after the state ends.
+        InputManager.Instance.ResetDodgeTimestamp();
     }
 
     public void FixedExecute()
