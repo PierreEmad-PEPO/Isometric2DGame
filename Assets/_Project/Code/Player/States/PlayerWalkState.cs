@@ -13,6 +13,8 @@ public class PlayerWalkState : IState
     {
         Debug.Log("[Walk State]: Entered");
 
+        _stateMachine.PlayerController.PlayerAnimator.Play("Walk");
+
     }
 
     public void FixedExecute() 

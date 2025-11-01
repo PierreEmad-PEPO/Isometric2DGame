@@ -15,6 +15,7 @@ public class PlayerIdleState : IState
 
         // Stop Player Movement.
         _stateMachine.PlayerController.PlayerMovement.SetIdleMovement();
+        _stateMachine.PlayerController.PlayerAnimator.Play("Idle");
     }
 
     public void FixedExecute()
