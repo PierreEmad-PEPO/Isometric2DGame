@@ -49,19 +49,16 @@ public class InputManager : MonoBehaviour
 
     private void AttackPerformed(InputAction.CallbackContext obj)
     {
-        Debug.Log("Attack Performed");
         _attackBufferTimestamp = Time.time;
     }
 
     private void DodgePerformed(InputAction.CallbackContext obj)
     {
-        Debug.Log("Dodge Performed");
         _dodgeBufferTimestamp = Time.time;
     }
 
     private void RunPerformed(InputAction.CallbackContext obj)
     {
-        Debug.Log("Run Performed");
         _runBufferTimestamp = Time.time;
     }
 }
